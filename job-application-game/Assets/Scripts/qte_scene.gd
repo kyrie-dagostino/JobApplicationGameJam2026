@@ -24,6 +24,8 @@ var keyList = [
 	{"keyString": "Q", "keyCode": KEY_Q},
 	{"keyString": "Q", "keyCode": KEY_Q},
 	{"keyString": "E", "keyCode": KEY_E},
+	{"keyString": "Q", "keyCode": KEY_Q},
+	{"keyString": "E", "keyCode": KEY_E},
 ]
 
 var count = 0

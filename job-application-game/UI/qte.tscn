@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cluq2rrqh66t4"]
 
 [ext_resource type="Shader" uid="uid://cpsj73pdu6t68" path="res://UI/qte.gdshader" id="1_fcuux"]
-[ext_resource type="Script" uid="uid://bfn6hmktsr2iy" path="res://UI/qte.gd" id="1_wcljn"]
+[ext_resource type="Script" uid="uid://bfn6hmktsr2iy" path="res://Assets/Scripts/qte.gd" id="1_wcljn"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wcljn"]
 resource_local_to_scene = true

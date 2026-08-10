@@ -10,7 +10,10 @@ config_version=5
 
 [application]
 
-config/name="Job Application Game"
+config/name="Don't Bring It Home"
+config/description="A short game about not bringing your work life home."
+config/version="1"
+run/main_scene="uid://d4h7i6xo27ngl"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 

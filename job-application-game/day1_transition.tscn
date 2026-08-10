@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dt4vuafk33mqr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_xadyu"]
+font_size = 50
+
+[node name="DayTransition" type="Control" unique_id=14460062]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=2119626407]
+
+[node name="Black" type="ColorRect" parent="CanvasLayer" unique_id=151027176]
+offset_right = 1165.0
+offset_bottom = 662.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="CanvasLayer/Black" unique_id=1064050998]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -34.5
+offset_right = 300.0
+offset_bottom = 34.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "tomorrow is another day"
+label_settings = SubResource("LabelSettings_xadyu")

@@ -1,27 +1,27 @@
 [gd_scene format=3 uid="uid://bwe2p3mdux3fp"]
 
-[ext_resource type="Texture2D" uid="uid://rmdx7obpmvhf" path="res://Assets/Art/Finished/environment2.png" id="1_2atia"]
-[ext_resource type="Texture2D" uid="uid://bqwtsa85v10uq" path="res://Assets/Art/Placeholder/environment1.png" id="2_5lntk"]
-[ext_resource type="Script" uid="uid://drdv17vclu3ks" path="res://family.gd" id="2_w2vy6"]
-[ext_resource type="PackedScene" uid="uid://4v6n677vm5e" path="res://UI/qte_scene.tscn" id="3_w2vy6"]
-[ext_resource type="PackedScene" uid="uid://co6kkurdmndc7" path="res://UI/resentment_meter.tscn" id="5_u1fn3"]
-[ext_resource type="PackedScene" uid="uid://c5bcslhr7teis" path="res://UI/fade.tscn" id="6_aq4tv"]
+[ext_resource type="Texture2D" uid="uid://rmdx7obpmvhf" path="res://Assets/Art/Finished/environment2.png" id="1_kisod"]
+[ext_resource type="Texture2D" uid="uid://bqwtsa85v10uq" path="res://Assets/Art/Placeholder/environment1.png" id="2_0547k"]
+[ext_resource type="Script" uid="uid://drdv17vclu3ks" path="res://Assets/Scripts/family.gd" id="3_ymxi6"]
+[ext_resource type="PackedScene" uid="uid://4v6n677vm5e" path="res://UI/qte_scene.tscn" id="4_yurtt"]
+[ext_resource type="PackedScene" uid="uid://co6kkurdmndc7" path="res://UI/resentment_meter.tscn" id="5_s1a1b"]
+[ext_resource type="PackedScene" uid="uid://c5bcslhr7teis" path="res://UI/fade.tscn" id="6_fm4gp"]
 
-[node name="testScene" type="Node2D" unique_id=37501002]
+[node name="day1" type="Node2D" unique_id=37501002]
 
 [node name="abbatoir" type="Node2D" parent="." unique_id=535639524]
 scale = Vector2(0.3, 0.3)
 
 [node name="abbatoirSprite" type="Sprite2D" parent="abbatoir" unique_id=1650031391]
 unique_name_in_owner = true
-texture = ExtResource("1_2atia")
+texture = ExtResource("1_kisod")
 
 [node name="family" type="Node2D" parent="." unique_id=1661131321]
 
 [node name="familySprite" type="Sprite2D" parent="family" unique_id=420453184]
 unique_name_in_owner = true
-texture = ExtResource("2_5lntk")
-script = ExtResource("2_w2vy6")
+texture = ExtResource("2_0547k")
+script = ExtResource("3_ymxi6")
 
 [node name="enterTimer" type="Timer" parent="family" unique_id=1159010453]
 unique_name_in_owner = true
@@ -35,9 +35,9 @@ one_shot = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1422533640]
 
-[node name="QTE_UI" parent="." unique_id=963769929 instance=ExtResource("3_w2vy6")]
+[node name="QTE_UI" parent="." unique_id=963769929 instance=ExtResource("4_yurtt")]
 
-[node name="ResentmentMeter" parent="." unique_id=181347949 instance=ExtResource("5_u1fn3")]
+[node name="ResentmentMeter" parent="." unique_id=181347949 instance=ExtResource("5_s1a1b")]
 anchors_preset = 0
 anchor_right = 0.0
 anchor_bottom = 0.0
@@ -48,7 +48,7 @@ offset_bottom = -309.0
 grow_horizontal = 1
 grow_vertical = 1
 
-[node name="Fade" parent="." unique_id=2036706371 instance=ExtResource("6_aq4tv")]
+[node name="Fade" parent="." unique_id=2036706371 instance=ExtResource("6_fm4gp")]
 
 [connection signal="scene_changed" from="family/familySprite" to="Fade" method="_on_family_sprite_scene_changed"]
 [connection signal="timeout" from="family/enterTimer" to="family/familySprite" method="_on_enter_timer_timeout"]

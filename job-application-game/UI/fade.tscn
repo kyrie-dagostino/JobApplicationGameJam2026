@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://c5bcslhr7teis"]
 
-[ext_resource type="Script" uid="uid://de4xg0nr2vl28" path="res://UI/fade.gd" id="1_boysv"]
+[ext_resource type="Script" uid="uid://de4xg0nr2vl28" path="res://Assets/Scripts/fade.gd" id="1_boysv"]
 
 [sub_resource type="Animation" id="Animation_nk5to"]
 length = 0.001
@@ -61,4 +61,8 @@ libraries/ = SubResource("AnimationLibrary_ppavw")
 [node name="FadeTimer" type="Timer" parent="Fade" unique_id=264693165]
 one_shot = true
 
+[node name="DayFadeTimer" type="Timer" parent="Fade" unique_id=1184888316]
+one_shot = true
+
 [connection signal="timeout" from="Fade/FadeTimer" to="." method="_on_fade_timer_timeout"]
+[connection signal="timeout" from="Fade/DayFadeTimer" to="." method="_on_day_fade_timer_timeout"]
