@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://co6kkurdmndc7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lieof"]
+bg_color = Color(0.43311325, 0.3042908, 0.84273857, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.2961754, 0.00054474385, 0.42645997, 1)
+border_blend = true
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+anti_aliasing = false
+
+[node name="ResentmentMeter" type="Control" unique_id=181347949]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1536097805]
+layout_mode = 1
+offset_right = 403.46664
+offset_bottom = 34.0
+theme_override_styles/fill = SubResource("StyleBoxFlat_lieof")
+step = 1.0
+value = 50.0
+show_percentage = false
