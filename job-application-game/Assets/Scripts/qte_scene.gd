@@ -1,5 +1,7 @@
 extends Control
 
+signal meat_emit
+
 @onready var timer: Timer = $Timer
 
 const QTE = preload("res://UI/qte.tscn")
@@ -31,7 +33,6 @@ var keyList = [
 var count = 0
 var keyPressedList = []
 
-
 func _on_timer_timeout() -> void:
 	if count == keyList.size():
 		timer.stop()
@@ -41,13 +42,12 @@ func _on_timer_timeout() -> void:
 	keyNode.finished.connect(_on_key_finished)
 	keyNode.keyCode = keyList[count].keyCode
 	keyNode.keyString = keyList[count].keyString
-
+	keyNode.meat_signal = meat_emit
 	add_child(keyNode)
 	count += 1
+func _meat_cut_doit():
+		meat_emit.emit()
+		print("Hello World Whatever")
 
 func _on_key_finished(keySuccsess):
 	keyPressedList.append(keySuccsess)
-	
-	
-	
-	

@@ -1,12 +1,12 @@
 extends Control
 
 signal finished(succsess)
-signal meat_anim_play
 
 @export var keyString: String = "Q"
 @export var keyCode: Key = KEY_Q
-@export var eventDuration := 1.0
+@export var eventDuration := 2.0
 @export var displayDuration:= 0.5
+@export var meat_signal: Signal
 
 @onready var color_rect: ColorRect = %ColorRect
 @onready var key_label: Label = %KeyLabel
@@ -21,7 +21,7 @@ var succsess = false
 func _ready() -> void:
 	add_to_group("QTE")
 	key_label.text = keyString
-	
+	print("spawnsucces")
 	await _animation()
 	
 	if not succsess:
@@ -38,7 +38,8 @@ func _input(event: InputEvent) -> void:
 		swing_sound.play()
 		tween.kill()
 		succsess = true
-		meat_anim_play.emit()
+		print("Meat hit")
+		meat_signal.emit()
 		await get_tree().create_timer(displayDuration).timeout
 		
 		hide()
