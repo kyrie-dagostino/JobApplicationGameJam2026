@@ -1,6 +1,7 @@
 extends Control
 
 signal finished(succsess)
+signal meat_anim_play
 
 @export var keyString: String = "Q"
 @export var keyCode: Key = KEY_Q
@@ -10,6 +11,9 @@ signal finished(succsess)
 @onready var color_rect: ColorRect = %ColorRect
 @onready var key_label: Label = %KeyLabel
 @onready var succsess_label: Label = %SuccsessLabel
+@onready var swing_sound: AudioStreamPlayer2D = $AudioStreamPlayer2D
+
+
 
 var tween = create_tween()
 var succsess = false
@@ -31,9 +35,10 @@ func _animation():
 func _input(event: InputEvent) -> void:
 	if Input.is_key_pressed(keyCode) and not succsess_label.visible:
 		succsess_label.show()
+		swing_sound.play()
 		tween.kill()
 		succsess = true
-		
+		meat_anim_play.emit()
 		await get_tree().create_timer(displayDuration).timeout
 		
 		hide()

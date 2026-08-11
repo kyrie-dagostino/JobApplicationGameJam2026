@@ -1,0 +1,142 @@
+[gd_scene format=3 uid="uid://bd7rdyycpl323"]
+
+[ext_resource type="Texture2D" uid="uid://bn3efy4u7q468" path="res://Assets/Art/Finished/button1.png" id="1_658dd"]
+[ext_resource type="Script" uid="uid://bkweiesfdc03k" path="res://UI/nextdaybutton.gd" id="2_ewrlc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4tftu"]
+font_size = 50
+font_color = Color(0.76764613, 0.89534813, 0.7650459, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_c8ops"]
+font_size = 30
+font_color = Color(0.76862746, 0.89411765, 0.7647059, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_2yli7"]
+font_size = 30
+
+[node name="ShopScene" type="Control" unique_id=1899108136]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1391008835]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -575.0
+offset_top = -1.0
+offset_right = 575.0
+offset_bottom = 199.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.26801583, 0.3994568, 0.25037155, 1)
+
+[node name="CashAllocation" type="Label" parent="ColorRect" unique_id=1958023944]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -146.5
+offset_top = -87.000015
+offset_right = 146.5
+offset_bottom = -30.70604
+grow_horizontal = 2
+grow_vertical = 2
+text = "cash allocation"
+label_settings = SubResource("LabelSettings_4tftu")
+
+[node name="Rent" type="Label" parent="ColorRect" unique_id=1294366729]
+layout_mode = 0
+offset_left = 319.0
+offset_top = 69.0
+offset_right = 380.0
+offset_bottom = 111.0
+text = "rent:
+200$"
+label_settings = SubResource("LabelSettings_c8ops")
+
+[node name="Food" type="Label" parent="ColorRect" unique_id=1660133146]
+layout_mode = 0
+offset_left = 767.0
+offset_top = 69.0
+offset_right = 833.0
+offset_bottom = 111.0
+text = "food:
+300$"
+label_settings = SubResource("LabelSettings_c8ops")
+
+[node name="ColorRect2" type="ColorRect" parent="." unique_id=2108980495]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -152.0
+offset_top = -104.0
+offset_right = 148.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0.29954746, 0.29954746, 0.29954743, 1)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=583111373]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -152.0
+offset_top = -104.0
+offset_right = 148.0
+offset_bottom = -24.0
+grow_horizontal = 2
+grow_vertical = 0
+texture = ExtResource("1_658dd")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="TextureRect" unique_id=43340548]
+modulate = Color(1, 1, 1, 0)
+top_level = true
+z_index = 1
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = 220.0
+offset_right = 150.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_ewrlc")
+
+[node name="Label" type="Label" parent="TextureRect" unique_id=858126503]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.5
+offset_top = -21.0
+offset_right = 66.5
+offset_bottom = 21.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "next day"
+label_settings = SubResource("LabelSettings_2yli7")
+
+[connection signal="button_up" from="TextureRect/Button" to="TextureRect/Button" method="_on_button_up"]
+[connection signal="nextday1" from="TextureRect/Button" to="TextureRect/Button" method="_on_button_up"]

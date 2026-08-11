@@ -2,6 +2,7 @@
 
 [ext_resource type="Shader" uid="uid://cpsj73pdu6t68" path="res://UI/qte.gdshader" id="1_fcuux"]
 [ext_resource type="Script" uid="uid://bfn6hmktsr2iy" path="res://Assets/Scripts/qte.gd" id="1_wcljn"]
+[ext_resource type="AudioStream" uid="uid://dxmevaltmi202" path="res://Assets/Sound/swing1.wav" id="3_w0d2p"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wcljn"]
 resource_local_to_scene = true
@@ -25,6 +26,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_wcljn")
+keyString = null
+keyCode = null
+eventDuration = null
+displayDuration = null
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=698206726]
 unique_name_in_owner = true
@@ -78,3 +83,6 @@ grow_vertical = 2
 theme_override_constants/outline_size = 20
 theme_override_font_sizes/font_size = 50
 text = "hit!"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=713671716]
+stream = ExtResource("3_w0d2p")

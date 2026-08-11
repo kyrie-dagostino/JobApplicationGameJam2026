@@ -57,6 +57,7 @@ color = Color(0, 0, 0, 0)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Fade" unique_id=928557096]
 libraries/ = SubResource("AnimationLibrary_ppavw")
+speed_scale = 3.0
 
 [node name="FadeTimer" type="Timer" parent="Fade" unique_id=264693165]
 one_shot = true

@@ -15,7 +15,6 @@ config/description="A short game about not bringing your work life home."
 config/version="1"
 run/main_scene="uid://d4h7i6xo27ngl"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://icon.svg"
 
 [display]
 
