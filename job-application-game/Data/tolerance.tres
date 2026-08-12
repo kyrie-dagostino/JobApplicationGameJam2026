@@ -4,5 +4,5 @@
 
 [resource]
 script = ExtResource("1_gttw8")
-health = 5
-MAX_HEALTH = 5
+health = 8
+MAX_HEALTH = 8

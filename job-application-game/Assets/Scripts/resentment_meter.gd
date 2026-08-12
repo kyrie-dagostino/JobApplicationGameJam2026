@@ -1,6 +1,6 @@
 extends Control
 
-@onready var family_sprite: Sprite2D = %familySprite
+@onready var family_sprite: AnimatedSprite2D = %familySprite
 
 @export var tol: Resource
 

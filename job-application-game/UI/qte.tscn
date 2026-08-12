@@ -181,12 +181,15 @@ one_shot = true
 [node name="AudioCue" type="AudioStreamPlayer2D" parent="." unique_id=367297039]
 position = Vector2(64.51196, 64.03999)
 stream = ExtResource("6_jjobj")
-volume_db = 6.0
 autoplay = true
 
 [node name="TraumaAudio" type="AudioStreamPlayer2D" parent="." unique_id=2071184437]
 position = Vector2(64.51196, 64.03999)
 stream = ExtResource("6_dbiki")
 volume_db = 6.0
+
+[node name="CooldownTimer" type="Timer" parent="." unique_id=1257294083]
+wait_time = 0.2
+one_shot = true
 
 [connection signal="timeout" from="ColorRect/TraumaVignette/TraumaTimer" to="." method="_on_trauma_timer_timeout"]

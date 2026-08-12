@@ -27,7 +27,7 @@ script = ExtResource("5_34bfm")
 
 [node name="dayTimer" type="Timer" parent="CanvasLayer" unique_id=1989912657]
 process_mode = 1
-wait_time = 180.0
+wait_time = 40.0
 one_shot = true
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=2026121349]

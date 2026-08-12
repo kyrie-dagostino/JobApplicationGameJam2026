@@ -3,33 +3,38 @@ extends Control
 signal meat_emit
 signal trauma_emit
 
-@onready var family_sprite: Sprite2D = %familySprite
+@onready var family_sprite: AnimatedSprite2D = %familySprite
 @onready var timer: Timer = $Timer
 
 const QTE = preload("res://UI/qte.tscn")
 
 var keyList = [
-	{"keyString": "Q", "keyCode": KEY_Q},
-	{"keyString": "E", "keyCode": KEY_E},
-	{"keyString": "E", "keyCode": KEY_E},
-	{"keyString": "Q", "keyCode": KEY_Q},
-	{"keyString": "Q", "keyCode": KEY_Q},
-	{"keyString": "E", "keyCode": KEY_E},
-	{"keyString": "E", "keyCode": KEY_E},
-	{"keyString": "Q", "keyCode": KEY_Q},
-	{"keyString": "E", "keyCode": KEY_E},
-	{"keyString": "E", "keyCode": KEY_E},
-	{"keyString": "E", "keyCode": KEY_E},
-	{"keyString": "Q", "keyCode": KEY_Q},
-	{"keyString": "Q", "keyCode": KEY_Q},
-	{"keyString": "E", "keyCode": KEY_E},
-	{"keyString": "Q", "keyCode": KEY_Q},
-	{"keyString": "E", "keyCode": KEY_E},
-	{"keyString": "Q", "keyCode": KEY_Q},
-	{"keyString": "Q", "keyCode": KEY_Q},
-	{"keyString": "E", "keyCode": KEY_E},
-	{"keyString": "Q", "keyCode": KEY_Q},
-	{"keyString": "E", "keyCode": KEY_E},
+{"keyString": "E", "keyCode": KEY_E}, 
+{"keyString": "E", "keyCode": KEY_E}, 
+{"keyString": "Q", "keyCode": KEY_Q}, 
+{"keyString": "Q", "keyCode": KEY_Q}, 
+{"keyString": "Q", "keyCode": KEY_Q}, 
+{"keyString": "E", "keyCode": KEY_E}, 
+{"keyString": "Q", "keyCode": KEY_Q}, 
+{"keyString": "Q", "keyCode": KEY_Q}, 
+{"keyString": "E", "keyCode": KEY_E}, 
+{"keyString": "Q", "keyCode": KEY_Q}, 
+{"keyString": "E", "keyCode": KEY_E}, 
+{"keyString": "E", "keyCode": KEY_E}, 
+{"keyString": "Q", "keyCode": KEY_Q}, 
+{"keyString": "Q", "keyCode": KEY_Q}, 
+{"keyString": "E", "keyCode": KEY_E}, 
+{"keyString": "E", "keyCode": KEY_E}, 
+{"keyString": "Q", "keyCode": KEY_Q}, 
+{"keyString": "E", "keyCode": KEY_E}, 
+{"keyString": "Q", "keyCode": KEY_Q}, 
+{"keyString": "Q", "keyCode": KEY_Q}, 
+{"keyString": "E", "keyCode": KEY_E}, 
+{"keyString": "Q", "keyCode": KEY_Q}, 
+{"keyString": "Q", "keyCode": KEY_Q}, 
+{"keyString": "Q", "keyCode": KEY_Q}, 
+{"keyString": "Q", "keyCode": KEY_Q}, 
+{"keyString": "E", "keyCode": KEY_E},
 ]
 
 var count = 0

@@ -7,6 +7,12 @@ var current_day: Node2D = null
 var day1 = preload("res://Levels/day1.tscn")
 var transition1 = preload("res://Levels/day1_transition.tscn")
 var day2 = preload("res://Levels/day2.tscn")
+var transition2 = preload("res://Levels/day2_transition.tscn")
+var day3 = preload("res://Levels/day3.tscn")
+var transition3 = preload("res://Levels/day3_transition.tscn")
+
+var eviction = preload("res://Levels/eviction_ending.tscn")
+
 
 @export var cash: Resource
 @export var days: Resource
@@ -48,6 +54,19 @@ func _on_main_menu_start_game() -> void:
 func _on_day_timer_timeout() -> void:
 	print("Level complete")
 	day_complete.emit()
+
+# Endings
+
+func eviction_ending():
+	if cash.cash < 0 and days.days_left == 0:
+		if is_instance_valid(current_day):
+			current_day.queue_free()
+
+	day_timer.stop()
+	timer_label.hide()
+
+	var transition = eviction.instantiate()
+	add_child(transition)
 
 
 func _on_canvas_layer_day_fade_ready() -> void:

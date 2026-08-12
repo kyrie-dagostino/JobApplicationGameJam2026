@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://dd8jpv3r0fhra"]
+
+[ext_resource type="FontFile" uid="uid://bjyi88s58hyfk" path="res://Assets/Art/Fonts/PatrickHand-Regular.ttf" id="1_1dnmv"]
+
+[resource]
+font = ExtResource("1_1dnmv")
+font_size = 60
+font_color = Color(0.34615496, 3.3691526e-07, 2.4065375e-07, 1)
+outline_size = 2
+outline_color = Color(0.08557383, 4.493457e-08, 1.35367735e-08, 1)

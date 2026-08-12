@@ -1,0 +1,616 @@
+[gd_scene format=3 uid="uid://0udrgyd6fdjx"]
+
+[ext_resource type="Shader" uid="uid://dlhli41yd2387" path="res://Assets/Art/Shaders/squiggleAbattoir.gdshader" id="1_hxopu"]
+[ext_resource type="Texture2D" uid="uid://cr758ntrsk3sy" path="res://Assets/Art/Finished/meats.png" id="2_hokml"]
+[ext_resource type="Shader" uid="uid://cb6m16xr2xhux" path="res://Assets/Art/Shaders/squiggleHome.gdshader" id="3_nur6l"]
+[ext_resource type="Texture2D" uid="uid://h6hjxf7eunuu" path="res://Assets/Art/Animation/1.png" id="4_qb734"]
+[ext_resource type="Texture2D" uid="uid://bnwprbr42yrgt" path="res://Assets/Art/Animation/2.png" id="5_lquuy"]
+[ext_resource type="Texture2D" uid="uid://dvi76dhpvbk3e" path="res://Assets/Art/Animation/3.png" id="6_2ju8c"]
+[ext_resource type="Texture2D" uid="uid://kmmpspr3y6lu" path="res://Assets/Art/Animation/4.png" id="7_ipt6d"]
+[ext_resource type="Texture2D" uid="uid://ruig2jw2dhbd" path="res://Assets/Art/Animation/5.png" id="8_17msi"]
+[ext_resource type="Texture2D" uid="uid://codpx3ppig7wf" path="res://Assets/Art/Animation/6.png" id="9_aqfr0"]
+[ext_resource type="Texture2D" uid="uid://bperkde7eeua2" path="res://Assets/Art/Animation/7.png" id="10_vywuy"]
+[ext_resource type="Texture2D" uid="uid://dc4v877b5uyad" path="res://Assets/Art/Animation/8.png" id="11_pug2u"]
+[ext_resource type="Texture2D" uid="uid://dsdhhwtfftfp1" path="res://Assets/Art/Animation/9.png" id="12_h0by8"]
+[ext_resource type="Texture2D" uid="uid://brsbbmimyto2f" path="res://Assets/Art/Animation/10.png" id="13_c85m2"]
+[ext_resource type="Texture2D" uid="uid://daxiraafjye7q" path="res://Assets/Art/Animation/11.png" id="14_17qbj"]
+[ext_resource type="Texture2D" uid="uid://1hyxnpkwrxfe" path="res://Assets/Art/Animation/12.png" id="15_sfl87"]
+[ext_resource type="Texture2D" uid="uid://c0fem1vyrilt2" path="res://Assets/Art/Animation/13.png" id="16_2l5hx"]
+[ext_resource type="Texture2D" uid="uid://d3gr3nq1dxax0" path="res://Assets/Art/Animation/14.png" id="17_0ale6"]
+[ext_resource type="Texture2D" uid="uid://doy7eii526xrw" path="res://Assets/Art/Animation/15.png" id="18_j51lp"]
+[ext_resource type="Texture2D" uid="uid://q4en3wvo3433" path="res://Assets/Art/Animation/16.png" id="19_3g5uq"]
+[ext_resource type="Texture2D" uid="uid://bm6b4sn7yqnd" path="res://Assets/Art/Animation/17.png" id="20_tgj1e"]
+[ext_resource type="Texture2D" uid="uid://8uj7bvu57ak" path="res://Assets/Art/Animation/18.png" id="21_t7xo2"]
+[ext_resource type="Texture2D" uid="uid://cwtwdp46nx37q" path="res://Assets/Art/Animation/19.png" id="22_y1rhv"]
+[ext_resource type="Texture2D" uid="uid://dsqqdu1cqbv1s" path="res://Assets/Art/Animation/20.png" id="23_gcl7o"]
+[ext_resource type="Texture2D" uid="uid://c0faqnny8i4e3" path="res://Assets/Art/Animation/21.png" id="24_iyyu0"]
+[ext_resource type="Texture2D" uid="uid://0bds71wsed6w" path="res://Assets/Art/Animation/22.png" id="25_xud23"]
+[ext_resource type="Texture2D" uid="uid://b2xbrvq0wfng6" path="res://Assets/Art/Animation/23.png" id="26_3o653"]
+[ext_resource type="Texture2D" uid="uid://cvyue678cuo88" path="res://Assets/Art/Animation/24.png" id="27_ol03n"]
+[ext_resource type="Texture2D" uid="uid://332g3prdtc78" path="res://Assets/Art/Animation/25.png" id="28_2cn3j"]
+[ext_resource type="Texture2D" uid="uid://c6fcyav76y8wl" path="res://Assets/Art/Animation/26.png" id="29_f2mqn"]
+[ext_resource type="Texture2D" uid="uid://b128fga3yy2x4" path="res://Assets/Art/Animation/27.png" id="30_ngucb"]
+[ext_resource type="Script" uid="uid://870al22a4itp" path="res://Assets/Scripts/meat_script.gd" id="31_v8eh8"]
+[ext_resource type="AudioStream" uid="uid://dxmevaltmi202" path="res://Assets/Sound/swing1.wav" id="32_4pwag"]
+[ext_resource type="AudioStream" uid="uid://d6hnejgp6ttm" path="res://Assets/Sound/meat1.wav" id="33_gluc6"]
+[ext_resource type="AudioStream" uid="uid://3ptsjupppo0p" path="res://Assets/Sound/meat_impact.mp3" id="34_4rtoc"]
+[ext_resource type="Texture2D" uid="uid://bcy4anfqc8rhm" path="res://Assets/Art/Animation/bebe1.png" id="35_qd5by"]
+[ext_resource type="Texture2D" uid="uid://cfkdy478y2oeq" path="res://Assets/Art/Animation/bebe2.png" id="36_f6pil"]
+[ext_resource type="Texture2D" uid="uid://di51iq8fdksy4" path="res://Assets/Art/Animation/bebe3.png" id="37_extna"]
+[ext_resource type="Texture2D" uid="uid://b1p5xsss75b13" path="res://Assets/Art/Animation/bebe4.png" id="38_iom4c"]
+[ext_resource type="Texture2D" uid="uid://dl1ws2omarmxk" path="res://Assets/Art/Animation/bebe5.png" id="39_4n48h"]
+[ext_resource type="Texture2D" uid="uid://dhquoptdn2ke3" path="res://Assets/Art/Animation/bebe6.png" id="40_yt25o"]
+[ext_resource type="Texture2D" uid="uid://bmb0awcg3r4p6" path="res://Assets/Art/Animation/bebe7.png" id="41_eurde"]
+[ext_resource type="Texture2D" uid="uid://c6wws41eijeel" path="res://Assets/Art/Animation/bebe8.png" id="42_3inp1"]
+[ext_resource type="Texture2D" uid="uid://b71vh2wg03x0i" path="res://Assets/Art/Animation/bebe9.png" id="43_val27"]
+[ext_resource type="Texture2D" uid="uid://cfymlwptl01f6" path="res://Assets/Art/Animation/bebe10.png" id="44_svv47"]
+[ext_resource type="Texture2D" uid="uid://c3wbtxcv0vgrw" path="res://Assets/Art/Animation/bebe11.png" id="45_exm16"]
+[ext_resource type="Script" uid="uid://drdv17vclu3ks" path="res://Assets/Scripts/family.gd" id="46_ml6mg"]
+[ext_resource type="PackedScene" uid="uid://4v6n677vm5e" path="res://UI/qte_scene.tscn" id="47_xp32k"]
+[ext_resource type="PackedScene" uid="uid://co6kkurdmndc7" path="res://UI/resentment_meter.tscn" id="48_8xkhh"]
+[ext_resource type="PackedScene" uid="uid://c5bcslhr7teis" path="res://UI/fade.tscn" id="49_munib"]
+[ext_resource type="AudioStream" uid="uid://cm7k2rokk07wa" path="res://Assets/Sound/My Song.wav" id="50_hgm1a"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_cy7ku"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_cy7ku"]
+shader = ExtResource("1_hxopu")
+shader_parameter/scale = Vector2(1, 1)
+shader_parameter/strength = 1.0
+shader_parameter/fps = 6.0
+shader_parameter/noise = SubResource("NoiseTexture2D_cy7ku")
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_nrwqi"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_nrwqi"]
+shader = ExtResource("1_hxopu")
+shader_parameter/scale = Vector2(1, 1)
+shader_parameter/strength = 1.0
+shader_parameter/fps = 6.0
+shader_parameter/noise = SubResource("NoiseTexture2D_nrwqi")
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_kfiif"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_appg1"]
+shader = ExtResource("3_nur6l")
+shader_parameter/scale = Vector2(1, 0.1)
+shader_parameter/strength = 0.4
+shader_parameter/fps = 9.0
+shader_parameter/noise = SubResource("NoiseTexture2D_kfiif")
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xadyu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_qb734")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_lquuy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_2ju8c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ipt6d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_17msi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_aqfr0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_vywuy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_pug2u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_h0by8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_c85m2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_17qbj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_sfl87")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_2l5hx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_0ale6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_j51lp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_3g5uq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_tgj1e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_t7xo2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_y1rhv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_gcl7o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_iyyu0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_xud23")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_3o653")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_ol03n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_2cn3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_f2mqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_ngucb")
+}],
+"loop": 1,
+"name": &"frames",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_oofeb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_bo36v"]
+resource_name = "cutmeat"
+length = 0.75
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.03333333, 0.06666666, 0.100000024, 0.13333334, 0.16666667, 0.2, 0.23333333, 0.26666665, 0.3, 0.33333334, 0.36666667, 0.39999998, 0.43333334, 0.4666667, 0.5, 0.53333336, 0.56666666, 0.6, 0.6333333, 0.66666675),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../audio/SFX_1")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("32_4pwag")
+}],
+"times": PackedFloat32Array(0.033333335)
+}
+tracks/1/use_blend = true
+tracks/2/type = "audio"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../../audio/SFX_2")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("33_gluc6")
+}],
+"times": PackedFloat32Array(0.36666667)
+}
+tracks/2/use_blend = true
+
+[sub_resource type="Animation" id="Animation_kfiif"]
+resource_name = "daymeat"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 5, 5.2000003),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [24, 25, 26]
+}
+
+[sub_resource type="Animation" id="Animation_cy7ku"]
+resource_name = "meatdrop"
+length = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.033333335, 0.06666666, 0.100000024, 0.13333334),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 2, 3, 4, 5]
+}
+tracks/1/type = "audio"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../../audio/SFX_1")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"clips": [{
+"end_offset": 0.96,
+"start_offset": 0.115,
+"stream": ExtResource("34_4rtoc")
+}],
+"times": PackedFloat32Array(0.6)
+}
+tracks/1/use_blend = true
+
+[sub_resource type="Animation" id="Animation_nrwqi"]
+resource_name = "meatstill"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_immuu"]
+resource_name = "nomeat"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [26]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cy7ku"]
+_data = {
+&"RESET": SubResource("Animation_oofeb"),
+&"cutmeat": SubResource("Animation_bo36v"),
+&"daymeat": SubResource("Animation_kfiif"),
+&"meatdrop": SubResource("Animation_cy7ku"),
+&"meatstill": SubResource("Animation_nrwqi"),
+&"nomeat": SubResource("Animation_immuu")
+}
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_pl3p5"]
+animation = &"cutmeat"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_633i3"]
+animation = &"daymeat"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_oofeb"]
+animation = &"meatdrop"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_bo36v"]
+animation = &"meatstill"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_kfiif"]
+animation = &"nomeat"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_670i1"]
+priority = 0
+advance_mode = 0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nrwqi"]
+switch_mode = 2
+advance_mode = 0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_immuu"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_bo36v"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_kfiif"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_cy7ku"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_633i3"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_xadyu"]
+states/Start/position = Vector2(139, 83)
+states/cutmeat/node = SubResource("AnimationNodeAnimation_pl3p5")
+states/cutmeat/position = Vector2(571, 204)
+states/daymeat/node = SubResource("AnimationNodeAnimation_633i3")
+states/daymeat/position = Vector2(326, -3)
+states/meatdrop/node = SubResource("AnimationNodeAnimation_oofeb")
+states/meatdrop/position = Vector2(524, 36)
+states/meatstill/node = SubResource("AnimationNodeAnimation_bo36v")
+states/meatstill/position = Vector2(672, 83)
+states/nomeat/node = SubResource("AnimationNodeAnimation_kfiif")
+states/nomeat/position = Vector2(401, 161)
+transitions = ["Start", "daymeat", SubResource("AnimationNodeStateMachineTransition_670i1"), "meatstill", "cutmeat", SubResource("AnimationNodeStateMachineTransition_nrwqi"), "cutmeat", "nomeat", SubResource("AnimationNodeStateMachineTransition_immuu"), "meatdrop", "meatstill", SubResource("AnimationNodeStateMachineTransition_bo36v"), "nomeat", "meatdrop", SubResource("AnimationNodeStateMachineTransition_kfiif"), "daymeat", "meatdrop", SubResource("AnimationNodeStateMachineTransition_cy7ku"), "Start", "meatdrop", SubResource("AnimationNodeStateMachineTransition_633i3")]
+graph_offset = Vector2(-62, -25)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bs0wm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("35_qd5by")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_f6pil")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_extna")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_iom4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_4n48h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_yt25o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_eurde")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_3inp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_val27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_svv47")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_exm16")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hikh6"]
+animation = &"child_idle"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qaqcg"]
+animation = &"child_idle_trauma"
+
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lqanm"]
+animation = &"child_trauma"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nqpd2"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0yd76"]
+break_loop_at_end = true
+advance_mode = 0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lq216"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_2yli7"]
+states/child_idle/node = SubResource("AnimationNodeAnimation_hikh6")
+states/child_idle/position = Vector2(342.8, 78.56)
+states/child_idle_trauma/node = SubResource("AnimationNodeAnimation_qaqcg")
+states/child_idle_trauma/position = Vector2(704.4, 71.36)
+states/child_trauma/node = SubResource("AnimationNodeAnimation_lqanm")
+states/child_trauma/position = Vector2(518.8, 55.999996)
+transitions = ["Start", "child_idle", SubResource("AnimationNodeStateMachineTransition_nqpd2"), "child_idle", "child_trauma", SubResource("AnimationNodeStateMachineTransition_0yd76"), "child_trauma", "child_idle_trauma", SubResource("AnimationNodeStateMachineTransition_lq216")]
+graph_offset = Vector2(100, -38)
+
+[sub_resource type="Animation" id="Animation_y3wc6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../family/familySprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_8w001"]
+resource_name = "child_idle"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../family/familySprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_p6eo3"]
+resource_name = "child_idle_trauma"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../family/familySprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [7, 8, 9, 10]
+}
+
+[sub_resource type="Animation" id="Animation_w7vs5"]
+resource_name = "child_trauma"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../../family/familySprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [4, 5, 6, 7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y3wc6"]
+_data = {
+&"RESET": SubResource("Animation_y3wc6"),
+&"child_idle": SubResource("Animation_8w001"),
+&"child_idle_trauma": SubResource("Animation_p6eo3"),
+&"child_trauma": SubResource("Animation_w7vs5")
+}
+
+[node name="day3" type="Node2D" unique_id=37501002]
+
+[node name="abbatoir" type="Node2D" parent="." unique_id=535639524]
+scale = Vector2(0.3, 0.3)
+
+[node name="decorMeat1" type="Sprite2D" parent="abbatoir" unique_id=899662329]
+material = SubResource("ShaderMaterial_cy7ku")
+texture = ExtResource("2_hokml")
+
+[node name="decorMeat2" type="Sprite2D" parent="abbatoir/decorMeat1" unique_id=1050088371]
+material = SubResource("ShaderMaterial_nrwqi")
+texture = ExtResource("2_hokml")
+flip_h = true
+
+[node name="abattoirSprite" type="AnimatedSprite2D" parent="abbatoir" unique_id=1650894068]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_appg1")
+sprite_frames = SubResource("SpriteFrames_xadyu")
+animation = &"frames"
+script = ExtResource("31_v8eh8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="abbatoir/abattoirSprite" unique_id=2047167680]
+libraries/ = SubResource("AnimationLibrary_cy7ku")
+
+[node name="AnimationTree" type="AnimationTree" parent="abbatoir/abattoirSprite" unique_id=899364340]
+active = false
+tree_root = SubResource("AnimationNodeStateMachine_xadyu")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="family" type="Node2D" parent="." unique_id=1661131321]
+
+[node name="familySprite" type="AnimatedSprite2D" parent="family" unique_id=1865043098]
+unique_name_in_owner = true
+material = SubResource("ShaderMaterial_appg1")
+position = Vector2(0, -1.5258789e-05)
+scale = Vector2(0.30316225, 0.30316222)
+sprite_frames = SubResource("SpriteFrames_bs0wm")
+script = ExtResource("46_ml6mg")
+
+[node name="AnimationTree" type="AnimationTree" parent="family/familySprite" unique_id=372365504]
+root_node = NodePath("%abattoirSprite")
+tree_root = SubResource("AnimationNodeStateMachine_2yli7")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="family/familySprite" unique_id=1646740124]
+root_node = NodePath("../../../abbatoir/abattoirSprite")
+libraries/ = SubResource("AnimationLibrary_y3wc6")
+
+[node name="enterTimer" type="Timer" parent="family" unique_id=1159010453]
+unique_name_in_owner = true
+wait_time = 15.0
+one_shot = true
+
+[node name="exitTimer" type="Timer" parent="family" unique_id=1412734902]
+unique_name_in_owner = true
+wait_time = 5.0
+one_shot = true
+
+[node name="qte_scene" parent="." unique_id=963769929 instance=ExtResource("47_xp32k")]
+unique_name_in_owner = true
+metadata/_edit_use_anchors_ = true
+
+[node name="ResentmentMeter" parent="." unique_id=181347949 instance=ExtResource("48_8xkhh")]
+anchors_preset = 0
+anchor_right = 0.0
+anchor_bottom = 0.0
+offset_left = -564.0
+offset_top = -309.0
+offset_right = -564.0
+offset_bottom = -309.0
+grow_horizontal = 1
+grow_vertical = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Fade" parent="." unique_id=2036706371 instance=ExtResource("49_munib")]
+
+[node name="audio" type="Node2D" parent="." unique_id=940270816]
+scale = Vector2(0.3, 0.3)
+
+[node name="background_song" type="AudioStreamPlayer2D" parent="audio" unique_id=1453532547]
+scale = Vector2(3.3333333, 3.3333333)
+stream = ExtResource("50_hgm1a")
+autoplay = true
+
+[node name="SFX_1" type="AudioStreamPlayer2D" parent="audio" unique_id=1738355524]
+position = Vector2(0, 826.6666)
+scale = Vector2(3.3333333, 3.3333333)
+
+[node name="SFX_2" type="AudioStreamPlayer2D" parent="audio" unique_id=1602691142]
+position = Vector2(0, 826.6666)
+scale = Vector2(3.3333333, 3.3333333)
+
+[connection signal="family_state_changed_signal" from="family/familySprite" to="abbatoir/abattoirSprite" method="_on_family_sprite_family_state_changed_signal"]
+[connection signal="family_state_changed_signal" from="family/familySprite" to="qte_scene" method="_on_family_sprite_family_state_changed_signal"]
+[connection signal="scene_changed" from="family/familySprite" to="abbatoir/abattoirSprite" method="_on_family_sprite_scene_changed"]
+[connection signal="meat_emit" from="qte_scene" to="abbatoir/abattoirSprite" method="_on_qte_scene_meat_emit"]
+[connection signal="meat_emit" from="qte_scene" to="ResentmentMeter" method="_on_qte_scene_meat_emit"]
+[connection signal="trauma_emit" from="qte_scene" to="ResentmentMeter" method="_on_qte_scene_trauma_emit"]
+[connection signal="trauma_emit" from="qte_scene" to="family/familySprite" method="_on_qte_scene_trauma_emit"]

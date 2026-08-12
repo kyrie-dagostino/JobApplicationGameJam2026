@@ -1,17 +1,17 @@
 [gd_scene format=3 uid="uid://bd7rdyycpl323"]
 
-[ext_resource type="Texture2D" uid="uid://i7ah1m5i1cnk" path="res://Assets/Art/Finished/budgeting.png" id="1_euca3"]
+[ext_resource type="Texture2D" uid="uid://mess2q8o75v2" path="res://Assets/Art/Finished/budgeting.png" id="1_euca3"]
 [ext_resource type="Script" uid="uid://sr3utbwen7o6" path="res://Assets/Scripts/shop.gd" id="1_jqxcw"]
 [ext_resource type="Script" uid="uid://bkweiesfdc03k" path="res://Assets/Scripts/nextdaybutton.gd" id="2_ewrlc"]
 [ext_resource type="Resource" uid="uid://c1i5owp3cahcp" path="res://Data/cash.tres" id="2_tgf3x"]
 [ext_resource type="Resource" uid="uid://djcnyuhv2qq18" path="res://Data/tolerance.tres" id="3_au84o"]
 [ext_resource type="Resource" uid="uid://hngdqfp4p850" path="res://Data/days.tres" id="4_mswso"]
 [ext_resource type="FontFile" uid="uid://bjyi88s58hyfk" path="res://Assets/Art/Fonts/PatrickHand-Regular.ttf" id="4_u7dfm"]
-[ext_resource type="LabelSettings" uid="uid://nddqw7cprpa1" path="res://Assets/Art/Fonts/nextDayLabels.tres" id="8_au84o"]
+[ext_resource type="LabelSettings" uid="uid://dd8jpv3r0fhra" path="res://Assets/Art/Fonts/budget.tres" id="7_au84o"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_k2irw"]
+[sub_resource type="LabelSettings" id="LabelSettings_5q2l1"]
 font = ExtResource("4_u7dfm")
-font_size = 60
+font_size = 40
 font_color = Color(0.34615496, 3.3691526e-07, 2.4065375e-07, 1)
 outline_size = 2
 outline_color = Color(0.08557383, 4.493457e-08, 1.35367735e-08, 1)
@@ -45,15 +45,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -206.37755
-offset_top = -201.85132
-offset_right = 79.62244
-offset_bottom = -119.85129
+offset_left = -24.328674
+offset_top = -245.5342
+offset_right = 261.6714
+offset_bottom = -163.5342
 grow_horizontal = 2
 grow_vertical = 2
 rotation = -0.026918657
 text = "due in % days"
-label_settings = SubResource("LabelSettings_k2irw")
+label_settings = SubResource("LabelSettings_5q2l1")
 
 [node name="Made" type="Label" parent="JournalRect" unique_id=1722749586]
 layout_mode = 1
@@ -62,15 +62,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -96.49231
-offset_top = -70.66739
-offset_right = -5.623657
-offset_bottom = 11.332642
+offset_left = -59.765717
+offset_top = -128.40088
+offset_right = 69.74777
+offset_bottom = -46.40088
 grow_horizontal = 2
 grow_vertical = 2
-rotation = -0.06980626
+rotation = -0.061841648
 text = "200$"
-label_settings = SubResource("LabelSettings_k2irw")
+label_settings = ExtResource("7_au84o")
 
 [node name="Total" type="Label" parent="JournalRect" unique_id=1157333454]
 layout_mode = 1
@@ -79,15 +79,15 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -195.42903
-offset_top = 162.89545
-offset_right = 86.570984
-offset_bottom = 244.89545
+offset_left = -57.434265
+offset_top = 96.86914
+offset_right = 224.56567
+offset_bottom = 178.86914
 grow_horizontal = 2
 grow_vertical = 2
 rotation = -0.049670156
-text = "total:   $$$$"
-label_settings = SubResource("LabelSettings_k2irw")
+text = "100$"
+label_settings = ExtResource("7_au84o")
 
 [node name="Kisses" type="Label" parent="JournalRect" unique_id=1235916338]
 visible = false
@@ -106,7 +106,7 @@ grow_vertical = 2
 rotation = -0.6802094
 text = "<3
 "
-label_settings = SubResource("LabelSettings_k2irw")
+label_settings = ExtResource("7_au84o")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=2072895435]
 layout_mode = 0
@@ -118,18 +118,24 @@ mouse_filter = 2
 color = Color(1, 1, 1, 0)
 
 [node name="Button" type="Button" parent="ColorRect" unique_id=10181782]
+self_modulate = Color(1, 1, 1, 0)
 layout_mode = 0
-offset_right = 240.0
-offset_bottom = 88.0
+offset_left = -488.0
+offset_top = 56.0
+offset_right = -175.4096
+offset_bottom = 144.0
+rotation = -0.1252556
 script = ExtResource("2_ewrlc")
 
 [node name="Label" type="Label" parent="ColorRect" unique_id=858869134]
 layout_mode = 0
-offset_left = 24.0
-offset_right = 165.0
-offset_bottom = 64.0
-text = "next day"
-label_settings = ExtResource("8_au84o")
+offset_left = -463.99994
+offset_top = 48.000004
+offset_right = -278.99994
+offset_bottom = 130.0
+rotation = -0.12739491
+text = "!! next day !!"
+label_settings = ExtResource("7_au84o")
 
 [connection signal="button_up" from="ColorRect/Button" to="ColorRect/Button" method="_on_button_up"]
 [connection signal="nextday2" from="ColorRect/Button" to="." method="_on_button_nextday_2"]

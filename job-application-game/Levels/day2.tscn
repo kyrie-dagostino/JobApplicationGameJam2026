@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://sqrb581bb55o"]
+[gd_scene format=3 uid="uid://bwe2p3mdux3fp"]
 
 [ext_resource type="Shader" uid="uid://dlhli41yd2387" path="res://Assets/Art/Shaders/squiggleAbattoir.gdshader" id="1_qaqcg"]
 [ext_resource type="Texture2D" uid="uid://cr758ntrsk3sy" path="res://Assets/Art/Finished/meats.png" id="2_lqanm"]
@@ -32,16 +32,24 @@
 [ext_resource type="Texture2D" uid="uid://b128fga3yy2x4" path="res://Assets/Art/Animation/27.png" id="30_7twb5"]
 [ext_resource type="Script" uid="uid://870al22a4itp" path="res://Assets/Scripts/meat_script.gd" id="31_1li82"]
 [ext_resource type="AudioStream" uid="uid://dxmevaltmi202" path="res://Assets/Sound/swing1.wav" id="32_bn4e4"]
-[ext_resource type="AudioStream" uid="uid://dneyv6fhaxlou" path="res://Assets/Sound/swing2.wav" id="33_c54yv"]
 [ext_resource type="AudioStream" uid="uid://d6hnejgp6ttm" path="res://Assets/Sound/meat1.wav" id="34_xrtoa"]
+[ext_resource type="Texture2D" uid="uid://bcy4anfqc8rhm" path="res://Assets/Art/Animation/bebe1.png" id="35_p6eo3"]
 [ext_resource type="AudioStream" uid="uid://3ptsjupppo0p" path="res://Assets/Sound/meat_impact.mp3" id="35_sglmg"]
-[ext_resource type="Texture2D" uid="uid://4glsl33l6pet" path="res://Assets/Art/Finished/environment1.png" id="36_ivm6j"]
+[ext_resource type="Texture2D" uid="uid://cfkdy478y2oeq" path="res://Assets/Art/Animation/bebe2.png" id="36_w7vs5"]
 [ext_resource type="Script" uid="uid://drdv17vclu3ks" path="res://Assets/Scripts/family.gd" id="37_bm3hf"]
-[ext_resource type="Texture2D" uid="uid://cel1ywkftylv8" path="res://Assets/Art/Finished/painting.png" id="38_ifq08"]
+[ext_resource type="Texture2D" uid="uid://di51iq8fdksy4" path="res://Assets/Art/Animation/bebe3.png" id="37_y3wc6"]
+[ext_resource type="Texture2D" uid="uid://b1p5xsss75b13" path="res://Assets/Art/Animation/bebe4.png" id="38_0r42s"]
 [ext_resource type="PackedScene" uid="uid://4v6n677vm5e" path="res://UI/qte_scene.tscn" id="39_2vw8h"]
+[ext_resource type="Texture2D" uid="uid://dl1ws2omarmxk" path="res://Assets/Art/Animation/bebe5.png" id="39_6ut67"]
 [ext_resource type="PackedScene" uid="uid://co6kkurdmndc7" path="res://UI/resentment_meter.tscn" id="40_bp7r4"]
+[ext_resource type="Texture2D" uid="uid://bmb0awcg3r4p6" path="res://Assets/Art/Animation/bebe7.png" id="40_gaoq1"]
+[ext_resource type="Texture2D" uid="uid://c6wws41eijeel" path="res://Assets/Art/Animation/bebe8.png" id="41_5xbw8"]
 [ext_resource type="PackedScene" uid="uid://c5bcslhr7teis" path="res://UI/fade.tscn" id="41_83n2g"]
-[ext_resource type="AudioStream" uid="uid://bc6x52gh7u3jr" path="res://Assets/Sound/binding of isaac - morphine (dark room).mp3" id="42_t67g4"]
+[ext_resource type="AudioStream" uid="uid://cm7k2rokk07wa" path="res://Assets/Sound/My Song.wav" id="41_hikh6"]
+[ext_resource type="Texture2D" uid="uid://b71vh2wg03x0i" path="res://Assets/Art/Animation/bebe9.png" id="42_y6l7b"]
+[ext_resource type="Texture2D" uid="uid://cfymlwptl01f6" path="res://Assets/Art/Animation/bebe10.png" id="43_cpcvt"]
+[ext_resource type="Texture2D" uid="uid://dhquoptdn2ke3" path="res://Assets/Art/Animation/bebe6.png" id="44_v6gfi"]
+[ext_resource type="Texture2D" uid="uid://c3wbtxcv0vgrw" path="res://Assets/Art/Animation/bebe11.png" id="45_y3wc6"]
 
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_cy7ku"]
 
@@ -176,7 +184,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_bo36v"]
 resource_name = "cutmeat"
-length = 4.2
+length = 0.75
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -184,7 +192,7 @@ tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2, 2.2, 2.4, 2.6, 2.8, 3, 3.2, 3.4, 3.6, 3.8, 4),
+"times": PackedFloat32Array(0, 0.03333333, 0.06666666, 0.100000024, 0.13333334, 0.16666667, 0.2, 0.23333333, 0.26666665, 0.3, 0.33333334, 0.36666667, 0.39999998, 0.43333334, 0.4666667, 0.5, 0.53333336, 0.56666666, 0.6, 0.6333333, 0.66666675),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26]
@@ -200,16 +208,8 @@ tracks/1/keys = {
 "end_offset": 0.0,
 "start_offset": 0.0,
 "stream": ExtResource("32_bn4e4")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("33_c54yv")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource("32_bn4e4")
 }],
-"times": PackedFloat32Array(0.4, 1.4, 3.2)
+"times": PackedFloat32Array(0.033333335)
 }
 tracks/1/use_blend = true
 tracks/2/type = "audio"
@@ -222,19 +222,14 @@ tracks/2/keys = {
 "clips": [{
 "end_offset": 0.0,
 "start_offset": 0.0,
-"stream": ExtResource("33_c54yv")
-}, {
-"end_offset": 0.0,
-"start_offset": 0.0,
 "stream": ExtResource("34_xrtoa")
 }],
-"times": PackedFloat32Array(0, 0.6)
+"times": PackedFloat32Array(0.36666667)
 }
 tracks/2/use_blend = true
 
 [sub_resource type="Animation" id="Animation_kfiif"]
 resource_name = "daymeat"
-length = 6.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -250,7 +245,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_cy7ku"]
 resource_name = "meatdrop"
-length = 1.3
+length = 0.25
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -258,7 +253,7 @@ tracks/0/path = NodePath(".:frame")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.23333333, 0.40000004, 0.6333333, 0.8),
+"times": PackedFloat32Array(0, 0.033333335, 0.06666666, 0.100000024, 0.13333334),
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
 "values": [1, 2, 3, 4, 5]
@@ -281,7 +276,7 @@ tracks/1/use_blend = true
 
 [sub_resource type="Animation" id="Animation_nrwqi"]
 resource_name = "meatstill"
-length = 0.2
+length = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -297,6 +292,7 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id="Animation_immuu"]
 resource_name = "nomeat"
+length = 0.1
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -377,23 +373,147 @@ states/nomeat/position = Vector2(401, 161)
 transitions = ["Start", "daymeat", SubResource("AnimationNodeStateMachineTransition_670i1"), "meatstill", "cutmeat", SubResource("AnimationNodeStateMachineTransition_nrwqi"), "cutmeat", "nomeat", SubResource("AnimationNodeStateMachineTransition_immuu"), "meatdrop", "meatstill", SubResource("AnimationNodeStateMachineTransition_bo36v"), "nomeat", "meatdrop", SubResource("AnimationNodeStateMachineTransition_kfiif"), "daymeat", "meatdrop", SubResource("AnimationNodeStateMachineTransition_cy7ku"), "Start", "meatdrop", SubResource("AnimationNodeStateMachineTransition_633i3")]
 graph_offset = Vector2(-62, -25)
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_jypbs"]
+[sub_resource type="SpriteFrames" id="SpriteFrames_bs0wm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("35_p6eo3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_w7vs5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_y3wc6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_0r42s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_6ut67")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_v6gfi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_gaoq1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_5xbw8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_y6l7b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_cpcvt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_y3wc6")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_bo36v"]
-shader = ExtResource("3_nqpd2")
-shader_parameter/scale = Vector2(1, 0.1)
-shader_parameter/strength = 1.0
-shader_parameter/fps = 12.0
-shader_parameter/noise = SubResource("NoiseTexture2D_jypbs")
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_hikh6"]
+animation = &"child_idle"
 
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_bo36v"]
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_qaqcg"]
+animation = &"child_idle_trauma"
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_kfiif"]
-shader = ExtResource("3_nqpd2")
-shader_parameter/scale = Vector2(1, 1)
-shader_parameter/strength = 1.0
-shader_parameter/fps = 6.0
-shader_parameter/noise = SubResource("NoiseTexture2D_bo36v")
+[sub_resource type="AnimationNodeAnimation" id="AnimationNodeAnimation_lqanm"]
+animation = &"child_trauma"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_nqpd2"]
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_0yd76"]
+break_loop_at_end = true
+advance_mode = 0
+
+[sub_resource type="AnimationNodeStateMachineTransition" id="AnimationNodeStateMachineTransition_lq216"]
+switch_mode = 2
+advance_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id="AnimationNodeStateMachine_2yli7"]
+states/child_idle/node = SubResource("AnimationNodeAnimation_hikh6")
+states/child_idle/position = Vector2(342.8, 78.56)
+states/child_idle_trauma/node = SubResource("AnimationNodeAnimation_qaqcg")
+states/child_idle_trauma/position = Vector2(704.4, 71.36)
+states/child_trauma/node = SubResource("AnimationNodeAnimation_lqanm")
+states/child_trauma/position = Vector2(518.8, 55.999996)
+transitions = ["Start", "child_idle", SubResource("AnimationNodeStateMachineTransition_nqpd2"), "child_idle", "child_trauma", SubResource("AnimationNodeStateMachineTransition_0yd76"), "child_trauma", "child_idle_trauma", SubResource("AnimationNodeStateMachineTransition_lq216")]
+graph_offset = Vector2(100, -38)
+
+[sub_resource type="Animation" id="Animation_y3wc6"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%familySprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_8w001"]
+resource_name = "child_idle"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%familySprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_p6eo3"]
+resource_name = "child_idle_trauma"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%familySprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [7, 8, 9, 10]
+}
+
+[sub_resource type="Animation" id="Animation_w7vs5"]
+resource_name = "child_trauma"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("%familySprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [4, 5, 6, 7]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_y3wc6"]
+_data = {
+&"RESET": SubResource("Animation_y3wc6"),
+&"child_idle": SubResource("Animation_8w001"),
+&"child_idle_trauma": SubResource("Animation_p6eo3"),
+&"child_trauma": SubResource("Animation_w7vs5")
+}
 
 [node name="day2" type="Node2D" unique_id=37501002]
 
@@ -426,25 +546,31 @@ anim_player = NodePath("../AnimationPlayer")
 
 [node name="family" type="Node2D" parent="." unique_id=1661131321]
 
-[node name="familySprite" type="Sprite2D" parent="family" unique_id=420453184]
+[node name="familySprite" type="AnimatedSprite2D" parent="family" unique_id=1865043098]
 unique_name_in_owner = true
-material = SubResource("ShaderMaterial_bo36v")
-scale = Vector2(0.48, 0.48)
-texture = ExtResource("36_ivm6j")
+material = SubResource("ShaderMaterial_appg1")
+position = Vector2(0, -1.5258789e-05)
+scale = Vector2(0.30316225, 0.30316222)
+sprite_frames = SubResource("SpriteFrames_bs0wm")
 script = ExtResource("37_bm3hf")
 
-[node name="portrait" type="Sprite2D" parent="family/familySprite" unique_id=718445511]
-material = SubResource("ShaderMaterial_kfiif")
-texture = ExtResource("38_ifq08")
+[node name="AnimationTree" type="AnimationTree" parent="family/familySprite" unique_id=372365504]
+root_node = NodePath("%abattoirSprite")
+tree_root = SubResource("AnimationNodeStateMachine_2yli7")
+anim_player = NodePath("../AnimationPlayer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="family/familySprite" unique_id=1646740124]
+root_node = NodePath("../../../abbatoir/abattoirSprite")
+libraries/ = SubResource("AnimationLibrary_y3wc6")
 
 [node name="enterTimer" type="Timer" parent="family" unique_id=1159010453]
 unique_name_in_owner = true
-wait_time = 40.0
+wait_time = 15.0
 one_shot = true
 
 [node name="exitTimer" type="Timer" parent="family" unique_id=1412734902]
 unique_name_in_owner = true
-wait_time = 12.0
+wait_time = 5.0
 one_shot = true
 
 [node name="qte_scene" parent="." unique_id=963769929 instance=ExtResource("39_2vw8h")]
@@ -470,7 +596,7 @@ scale = Vector2(0.3, 0.3)
 
 [node name="background_song" type="AudioStreamPlayer2D" parent="audio" unique_id=1453532547]
 scale = Vector2(3.3333333, 3.3333333)
-stream = ExtResource("42_t67g4")
+stream = ExtResource("41_hikh6")
 autoplay = true
 
 [node name="SFX_1" type="AudioStreamPlayer2D" parent="audio" unique_id=1738355524]
@@ -481,12 +607,10 @@ scale = Vector2(3.3333333, 3.3333333)
 position = Vector2(0, 826.6666)
 scale = Vector2(3.3333333, 3.3333333)
 
+[connection signal="family_state_changed_signal" from="family/familySprite" to="abbatoir/abattoirSprite" method="_on_family_sprite_family_state_changed_signal"]
 [connection signal="family_state_changed_signal" from="family/familySprite" to="qte_scene" method="_on_family_sprite_family_state_changed_signal"]
 [connection signal="scene_changed" from="family/familySprite" to="abbatoir/abattoirSprite" method="_on_family_sprite_scene_changed"]
-[connection signal="scene_changed" from="family/familySprite" to="Fade" method="_on_family_sprite_scene_changed"]
-[connection signal="timeout" from="family/enterTimer" to="family/familySprite" method="_on_enter_timer_timeout"]
-[connection signal="timeout" from="family/exitTimer" to="family/familySprite" method="_on_exit_timer_timeout"]
 [connection signal="meat_emit" from="qte_scene" to="abbatoir/abattoirSprite" method="_on_qte_scene_meat_emit"]
 [connection signal="meat_emit" from="qte_scene" to="ResentmentMeter" method="_on_qte_scene_meat_emit"]
+[connection signal="trauma_emit" from="qte_scene" to="family/familySprite" method="_on_qte_scene_trauma_emit"]
 [connection signal="trauma_emit" from="qte_scene" to="ResentmentMeter" method="_on_qte_scene_trauma_emit"]
-[connection signal="fade_ready" from="Fade" to="family/familySprite" method="_on_fade_fade_ready"]

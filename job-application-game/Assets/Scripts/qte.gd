@@ -4,12 +4,14 @@ signal finished(succsess)
 
 @export var keyString: String = "Q"
 @export var keyCode: Key = KEY_Q
-@export var eventDuration := 1.0
-@export var displayDuration:= 0.5
+@export var eventDuration := 0.5
+@export var displayDuration:= 0.2
 @export var meat_signal: Signal
 @export var trauma_signal: Signal
 @export var did_family_state_change = false
 @export var cash: Resource
+
+@onready var cooldown_timer: Timer = $CooldownTimer
 
 @onready var color_rect: ColorRect = %ColorRect
 @onready var key_label: Label = %KeyLabel
@@ -49,10 +51,10 @@ func _input(event: InputEvent) -> void:
 		print("QTE hit")
 		award_cash()
 		trauma_inflicted()
+		cooldown_timer.start()
 		await get_tree().create_timer(displayDuration).timeout
 		
 		hide()
-
 # Signal
 
 func determine_family_state(new_family_state: bool) -> void:

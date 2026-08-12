@@ -20,7 +20,7 @@ func label_calcs():
 	made.text = "%s$" % cash.cash
 	total.text = "%s$" % (cash.cash - 100)
 func show_kisses():
-	if tol.health == 5:
+	if tol.health == 8:
 		kisses.show()
 
 func _on_button_nextday_2() -> void:
