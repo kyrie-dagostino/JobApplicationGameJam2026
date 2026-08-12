@@ -12,7 +12,7 @@ grow_vertical = 2
 script = ExtResource("1_3flok")
 
 [node name="Timer" type="Timer" parent="." unique_id=930484411]
-wait_time = 3.0
+wait_time = 7.5
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

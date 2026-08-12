@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="cash_value" format=3 uid="uid://c1i5owp3cahcp"]
+
+[ext_resource type="Script" uid="uid://dtc088gcou4ml" path="res://Data/cash.gd" id="1_f08bt"]
+
+[resource]
+script = ExtResource("1_f08bt")
+MAX_CASH = 600

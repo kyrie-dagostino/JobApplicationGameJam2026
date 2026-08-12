@@ -1,0 +1,10 @@
+[gd_resource type="LabelSettings" format=3 uid="uid://xgji6dj7xi2l"]
+
+[ext_resource type="FontFile" uid="uid://crh16f7ih7gyu" path="res://Assets/Art/Fonts/SirinStencil-Regular.ttf" id="1_nteu4"]
+
+[resource]
+font = ExtResource("1_nteu4")
+font_size = 60
+font_color = Color(0.56078434, 0.41568628, 0.16862746, 1)
+outline_size = 6
+outline_color = Color(0.43137255, 0.17254902, 0.12941177, 1)

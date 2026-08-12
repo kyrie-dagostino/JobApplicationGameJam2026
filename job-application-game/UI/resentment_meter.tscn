@@ -1,20 +1,27 @@
 [gd_scene format=3 uid="uid://co6kkurdmndc7"]
 
-[ext_resource type="Script" uid="uid://csm0y1rifeqh6" path="res://UI/resentment_meter.gd" id="1_1jgp3"]
+[ext_resource type="Script" uid="uid://csm0y1rifeqh6" path="res://Assets/Scripts/resentment_meter.gd" id="1_1jgp3"]
+[ext_resource type="Resource" uid="uid://djcnyuhv2qq18" path="res://Data/tolerance.tres" id="2_ag5ee"]
+[ext_resource type="FontFile" uid="uid://crh16f7ih7gyu" path="res://Assets/Art/Fonts/SirinStencil-Regular.ttf" id="2_tleu5"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lieof"]
-bg_color = Color(0.5803922, 0.39607844, 0.050980393, 1)
+bg_color = Color(0.43137255, 0.17254902, 0.12941177, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
 border_width_bottom = 2
-border_color = Color(0.2961754, 0.00054474385, 0.42645997, 1)
+border_color = Color(0.12116311, 0.02797834, 0.01680085, 1)
 border_blend = true
 corner_radius_top_left = 4
 corner_radius_top_right = 4
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 anti_aliasing = false
+
+[sub_resource type="LabelSettings" id="LabelSettings_tleu5"]
+font = ExtResource("2_tleu5")
+font_size = 30
+font_color = Color(0, 0, 0, 1)
 
 [node name="ResentmentMeter" type="Control" unique_id=181347949]
 layout_mode = 3
@@ -24,10 +31,11 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_1jgp3")
+tol = ExtResource("2_ag5ee")
 
 [node name="HealthBar" type="ProgressBar" parent="." unique_id=1536097805]
 layout_mode = 1
-offset_right = 403.46664
+offset_right = 320.0
 offset_bottom = 34.0
 theme_override_styles/fill = SubResource("StyleBoxFlat_lieof")
 max_value = 5.0
@@ -37,8 +45,9 @@ show_percentage = false
 
 [node name="HealthLabel" type="Label" parent="." unique_id=1275171541]
 layout_mode = 1
-offset_left = 136.0
-offset_top = 5.0
-offset_right = 257.0
-offset_bottom = 28.0
-text = "Tolerance: 5"
+offset_left = 96.0
+offset_top = -8.0
+offset_right = 216.0
+offset_bottom = 36.0
+text = "Tolerance"
+label_settings = SubResource("LabelSettings_tleu5")

@@ -2,30 +2,73 @@
 
 [ext_resource type="Shader" uid="uid://cpsj73pdu6t68" path="res://UI/qte.gdshader" id="1_fcuux"]
 [ext_resource type="Script" uid="uid://bfn6hmktsr2iy" path="res://Assets/Scripts/qte.gd" id="1_wcljn"]
-[ext_resource type="AudioStream" uid="uid://dxmevaltmi202" path="res://Assets/Sound/swing1.wav" id="3_w0d2p"]
+[ext_resource type="Resource" uid="uid://c1i5owp3cahcp" path="res://Data/cash.tres" id="2_7pqav"]
+[ext_resource type="LabelSettings" uid="uid://xgji6dj7xi2l" path="res://Assets/Art/Fonts/QTELabels.tres" id="3_j165i"]
+[ext_resource type="AudioStream" uid="uid://dxnfetlkdmvy1" path="res://Assets/Sound/trauma_audio.mp3" id="6_dbiki"]
+[ext_resource type="AudioStream" uid="uid://cv34kwtrjsudq" path="res://Assets/Sound/qte_cue.mp3" id="6_jjobj"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_wcljn"]
 resource_local_to_scene = true
 shader = ExtResource("1_fcuux")
-shader_parameter/first_color = Color(0.0833333, 1, 0, 1)
-shader_parameter/second_color = Color(0.983333, 1, 0, 1)
-shader_parameter/third_color = Color(1, 0, 0, 1)
+shader_parameter/first_color = Color(0.21193877, 0.40470737, 0.27167726, 1)
+shader_parameter/second_color = Color(0.56, 0.41626668, 0.16800001, 1)
+shader_parameter/third_color = Color(0.43, 0.17414999, 0.12900001, 1)
 shader_parameter/outline_color = Color(0, 0, 0, 1)
 shader_parameter/unfilled_color = Color(0.443, 0.443, 0.443, 1)
 shader_parameter/value = 1.0
 shader_parameter/smooth_ = 0.005
-shader_parameter/width_in = 0.78
-shader_parameter/width_out = 0.95
-shader_parameter/border_width = 0.03
+shader_parameter/width_in = 0.75
+shader_parameter/width_out = 0.85
+shader_parameter/border_width = 0.05
+
+[sub_resource type="Animation" id="Animation_nk5to"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Red:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.44, 0, 0.029333305, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_7pqav"]
+resource_name = "trauma"
+length = 0.26666668
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Red:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.26666668),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.44, 0, 0.029333305, 0), Color(0.44, 0, 0.029333305, 0.70980394)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7pqav"]
+_data = {
+&"RESET": SubResource("Animation_nk5to"),
+&"trauma": SubResource("Animation_7pqav")
+}
 
 [node name="Qte" type="Control" unique_id=2094064507]
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
+anchor_top = 0.48100004
+anchor_right = 0.11100001
+anchor_bottom = 0.5
+offset_left = -384.0
+offset_top = 12.311981
+offset_right = -511.872
 grow_vertical = 2
 script = ExtResource("1_wcljn")
+cash = ExtResource("2_7pqav")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=698206726]
 unique_name_in_owner = true
@@ -36,10 +79,10 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -19.0
-offset_top = -20.0
-offset_right = 101.0
-offset_bottom = 100.0
+offset_left = -56.0
+offset_top = -60.0
+offset_right = 64.0
+offset_bottom = 60.0
 grow_horizontal = 2
 grow_vertical = 2
 
@@ -51,15 +94,16 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -20.0
-offset_top = -34.5
-offset_right = 20.0
-offset_bottom = 34.5
+offset_left = -17.0
+offset_top = -44.0
+offset_right = 23.0
+offset_bottom = 30.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/outline_size = 20
 theme_override_font_sizes/font_size = 50
 text = "Q"
+label_settings = ExtResource("3_j165i")
 
 [node name="SuccsessLabel" type="Label" parent="ColorRect" unique_id=278506411]
 unique_name_in_owner = true
@@ -70,15 +114,79 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -41.0
-offset_top = -36.0
-offset_right = 224.59418
-offset_bottom = 41.0
+offset_left = -12.0
+offset_top = -116.0
+offset_right = 115.0
+offset_bottom = -28.0
 grow_horizontal = 2
 grow_vertical = 2
+rotation = 0.27948442
 theme_override_constants/outline_size = 20
 theme_override_font_sizes/font_size = 50
-text = "hit!"
+text = "+10$"
+label_settings = ExtResource("3_j165i")
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=713671716]
-stream = ExtResource("3_w0d2p")
+[node name="ChildLabel" type="Label" parent="ColorRect" unique_id=338630776]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -68.0
+offset_top = -12.0
+offset_right = 85.0
+offset_bottom = 76.0
+grow_horizontal = 2
+grow_vertical = 2
+rotation = 0.27948442
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/font_size = 50
+text = "stop..."
+label_settings = ExtResource("3_j165i")
+
+[node name="TraumaVignette" type="Control" parent="ColorRect" unique_id=799400822]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Red" type="ColorRect" parent="ColorRect/TraumaVignette" unique_id=645205501]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -388.0
+offset_top = -396.0
+offset_right = 940.6924
+offset_bottom = 355.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.44, 0, 0.029333305, 0)
+
+[node name="TraumaVignettePlayer" type="AnimationPlayer" parent="ColorRect/TraumaVignette" unique_id=1490251989]
+libraries/ = SubResource("AnimationLibrary_7pqav")
+speed_scale = 3.0
+
+[node name="TraumaTimer" type="Timer" parent="ColorRect/TraumaVignette" unique_id=2135286345]
+wait_time = 0.25
+one_shot = true
+
+[node name="AudioCue" type="AudioStreamPlayer2D" parent="." unique_id=367297039]
+position = Vector2(64.51196, 64.03999)
+stream = ExtResource("6_jjobj")
+volume_db = 6.0
+autoplay = true
+
+[node name="TraumaAudio" type="AudioStreamPlayer2D" parent="." unique_id=2071184437]
+position = Vector2(64.51196, 64.03999)
+stream = ExtResource("6_dbiki")
+volume_db = 6.0
+
+[connection signal="timeout" from="ColorRect/TraumaVignette/TraumaTimer" to="." method="_on_trauma_timer_timeout"]

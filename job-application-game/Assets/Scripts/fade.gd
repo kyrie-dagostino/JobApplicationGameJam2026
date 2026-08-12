@@ -8,17 +8,25 @@ signal day_fade_ready
 @onready var fade_timer: Timer = $Fade/FadeTimer
 @onready var day_fade_timer: Timer = $Fade/DayFadeTimer
 
+func _ready():
+	hide()
+
 func _on_family_sprite_scene_changed():
+	show()
 	animation_player.play("fade")
 	fade_timer.start()
 
 func _on_fade_timer_timeout():
 	animation_player.play_backwards("fade")
+	await animation_player.animation_finished
+	hide()
 	fade_ready.emit()
 
 func _on_main_day_complete():
+	show()
 	animation_player.play("fade")
 	day_fade_timer.start()
 
 func _on_day_fade_timer_timeout():
+	hide()
 	day_fade_ready.emit()
