@@ -17,7 +17,7 @@ func _ready():
 
 func label_calcs():
 	dues.text = "due in %s days" % days.days_left
-	made.text = "%s$" % cash.cash
+	made.text = "%s$" % cash.cash_today
 	total.text = "%s$" % (cash.cash - 100)
 func show_kisses():
 	if tol.health == 8:
@@ -25,3 +25,4 @@ func show_kisses():
 
 func _on_button_nextday_2() -> void:
 	next_day_clicked.emit()
+	cash.cash_today = 0

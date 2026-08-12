@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bt5pmlf13jucl"]
+
+[ext_resource type="VideoStream" uid="uid://d2okemeb05qmg" path="res://Assets/Art/Videos/Vacation ending.ogv" id="1_3m6m8"]
+
+[node name="vacation_ending" type="Node2D" unique_id=1528156506]
+position = Vector2(-563, -333)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=1706398234]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -25.0
+offset_top = -2.000001
+offset_right = 1895.0
+offset_bottom = 1078.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.6291385, 0.64000016)
+stream = ExtResource("1_3m6m8")
+autoplay = true
+metadata/_edit_use_anchors_ = true

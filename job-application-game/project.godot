@@ -16,11 +16,12 @@ config/version="1.0.0"
 run/main_scene="uid://d4h7i6xo27ngl"
 config/features=PackedStringArray("4.7", "Forward Plus")
 boot_splash/bg_color=Color(0.18081555, 0.0653834, 0.086638115, 1)
-boot_splash/show_image=false
+boot_splash/image="uid://bc7ly7qwvgi7m"
 config/icon="uid://btfitusgys13"
 
 [display]
 
+window/size/resizable=false
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 

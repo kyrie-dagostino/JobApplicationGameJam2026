@@ -5,13 +5,16 @@
 [ext_resource type="PackedScene" uid="uid://c5bcslhr7teis" path="res://UI/fade.tscn" id="3_7pswh"]
 [ext_resource type="LabelSettings" uid="uid://xgji6dj7xi2l" path="res://Assets/Art/Fonts/QTELabels.tres" id="3_nj2yk"]
 [ext_resource type="Resource" uid="uid://hngdqfp4p850" path="res://Data/days.tres" id="3_ovrsl"]
+[ext_resource type="Resource" uid="uid://djcnyuhv2qq18" path="res://Data/tolerance.tres" id="4_hbaan"]
 [ext_resource type="Script" uid="uid://76ue01m46g8f" path="res://Assets/Scripts/dailytimer.gd" id="5_34bfm"]
 [ext_resource type="PackedScene" uid="uid://bv4wvi43rp2o2" path="res://Levels/main_menu.tscn" id="7_hbaan"]
 
 [node name="Main" type="Node2D" unique_id=1769445430]
+position = Vector2(520, 336)
 script = ExtResource("1_lwy2l")
 cash = ExtResource("2_7pswh")
 days = ExtResource("3_ovrsl")
+tol = ExtResource("4_hbaan")
 
 [node name="TimerLabel" type="Label" parent="." unique_id=1409541580]
 z_index = 10
@@ -30,9 +33,12 @@ process_mode = 1
 wait_time = 40.0
 one_shot = true
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=2026121349]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=618793815]
+position = Vector2(56, -12)
+zoom = Vector2(1.1, 1.1)
 
 [node name="main_menu" parent="." unique_id=14460062 instance=ExtResource("7_hbaan")]
+position = Vector2(56.000015, -16)
 
 [connection signal="day_complete" from="." to="CanvasLayer" method="_on_main_day_complete"]
 [connection signal="day_fade_ready" from="CanvasLayer" to="." method="_on_canvas_layer_day_fade_ready"]

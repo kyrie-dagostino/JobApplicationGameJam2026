@@ -565,12 +565,12 @@ libraries/ = SubResource("AnimationLibrary_y3wc6")
 
 [node name="enterTimer" type="Timer" parent="family" unique_id=1159010453]
 unique_name_in_owner = true
-wait_time = 15.0
+wait_time = 18.0
 one_shot = true
 
 [node name="exitTimer" type="Timer" parent="family" unique_id=1412734902]
 unique_name_in_owner = true
-wait_time = 5.0
+wait_time = 8.0
 one_shot = true
 
 [node name="qte_scene" parent="." unique_id=963769929 instance=ExtResource("39_2vw8h")]
@@ -610,6 +610,9 @@ scale = Vector2(3.3333333, 3.3333333)
 [connection signal="family_state_changed_signal" from="family/familySprite" to="abbatoir/abattoirSprite" method="_on_family_sprite_family_state_changed_signal"]
 [connection signal="family_state_changed_signal" from="family/familySprite" to="qte_scene" method="_on_family_sprite_family_state_changed_signal"]
 [connection signal="scene_changed" from="family/familySprite" to="abbatoir/abattoirSprite" method="_on_family_sprite_scene_changed"]
+[connection signal="scene_changed" from="family/familySprite" to="Fade" method="_on_family_sprite_scene_changed"]
+[connection signal="timeout" from="family/enterTimer" to="family/familySprite" method="_on_enter_timer_timeout"]
+[connection signal="timeout" from="family/exitTimer" to="family/familySprite" method="_on_exit_timer_timeout"]
 [connection signal="meat_emit" from="qte_scene" to="abbatoir/abattoirSprite" method="_on_qte_scene_meat_emit"]
 [connection signal="meat_emit" from="qte_scene" to="ResentmentMeter" method="_on_qte_scene_meat_emit"]
 [connection signal="trauma_emit" from="qte_scene" to="family/familySprite" method="_on_qte_scene_trauma_emit"]

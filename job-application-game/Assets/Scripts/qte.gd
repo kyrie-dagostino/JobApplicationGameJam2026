@@ -69,6 +69,7 @@ func award_cash() -> void:
 	if not did_family_state_change:
 		succsess_label.show()
 		cash.cash += 10
+		cash.cash_today += 10
 		cash.meat_obtained += 1
 		meat_signal.emit()
 		print("Awarded 10 cash, per 1 meat!")

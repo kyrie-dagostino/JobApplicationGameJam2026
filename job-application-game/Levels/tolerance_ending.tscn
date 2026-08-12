@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://bixlbnnnb5elk"]
+
+[ext_resource type="VideoStream" uid="uid://bg4ixjr0b6r4x" path="res://Assets/Art/Videos/Bad end tolerance bar 0.ogv" id="4_66opq"]
+
+[node name="eviction_ending" type="Node2D" unique_id=1528156506]
+position = Vector2(-562, -301)
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=397983031]
+offset_left = -62.0
+offset_top = -37.0
+offset_right = 1218.0
+offset_bottom = 683.0
+stream = ExtResource("4_66opq")
+autoplay = true
+metadata/_edit_use_anchors_ = true
