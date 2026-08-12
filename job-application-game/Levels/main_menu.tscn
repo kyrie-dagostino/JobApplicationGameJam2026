@@ -1,0 +1,83 @@
+[gd_scene format=3 uid="uid://bv4wvi43rp2o2"]
+
+[ext_resource type="Shader" uid="uid://2xynurobvims" path="res://Assets/Art/Shaders/squiggle.gdshader" id="1_3es34"]
+[ext_resource type="Texture2D" uid="uid://bor52htt6nlps" path="res://Assets/Art/Finished/main_menu.png" id="1_6ucrw"]
+[ext_resource type="Script" uid="uid://cyw5joguwj1ry" path="res://Levels/menu_script.gd" id="1_8md67"]
+[ext_resource type="LabelSettings" uid="uid://cbtpw2tktsmp1" path="res://Assets/Art/Fonts/titleScreen.tres" id="3_8md67"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_dxr5g"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xadyu"]
+shader = ExtResource("1_3es34")
+shader_parameter/scale = Vector2(1, 1)
+shader_parameter/strength = 1.0
+shader_parameter/fps = 3.0
+shader_parameter/noise = SubResource("NoiseTexture2D_dxr5g")
+
+[node name="main_menu" type="Node2D" unique_id=906496809]
+script = ExtResource("1_8md67")
+
+[node name="elements" type="Control" parent="." unique_id=14460062]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="CanvasLayer" type="CanvasLayer" parent="elements" unique_id=2119626407]
+
+[node name="TextureRect" type="TextureRect" parent="elements/CanvasLayer" unique_id=587066455]
+self_modulate = Color(0.54, 0.54, 0.54, 1)
+material = SubResource("ShaderMaterial_xadyu")
+offset_left = -6.0
+offset_top = -4.0
+offset_right = 1160.0
+offset_bottom = 659.0
+mouse_filter = 2
+texture = ExtResource("1_6ucrw")
+expand_mode = 1
+
+[node name="Title" type="Label" parent="elements/CanvasLayer/TextureRect" unique_id=1355488919]
+visible = false
+layout_mode = 0
+offset_left = 438.0
+offset_top = 33.0
+offset_right = 1105.0
+offset_bottom = 162.0
+text = "don't bring it home"
+label_settings = ExtResource("3_8md67")
+
+[node name="PlayButton" type="Button" parent="elements/CanvasLayer/TextureRect" unique_id=2016303847]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -17.0
+offset_top = -135.5
+offset_right = 445.0
+offset_bottom = 57.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="QuitButton" type="Button" parent="elements/CanvasLayer/TextureRect" unique_id=57440763]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -600.0
+offset_top = 80.5
+offset_right = -138.0
+offset_bottom = 273.5
+grow_horizontal = 0
+grow_vertical = 2
+
+[connection signal="button_up" from="elements/CanvasLayer/TextureRect/PlayButton" to="elements" method="_on_play_button_button_up"]
+[connection signal="button_up" from="elements/CanvasLayer/TextureRect/PlayButton" to="." method="_on_play_button_button_up"]
+[connection signal="button_up" from="elements/CanvasLayer/TextureRect/QuitButton" to="elements" method="_on_quit_button_button_up"]
+[connection signal="button_up" from="elements/CanvasLayer/TextureRect/QuitButton" to="." method="_on_quit_button_button_up"]

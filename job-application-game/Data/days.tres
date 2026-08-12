@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="days_left" format=3 uid="uid://hngdqfp4p850"]
+
+[ext_resource type="Script" uid="uid://dgbh7nkpfp4gi" path="res://Data/days.gd" id="1_eiy5c"]
+
+[resource]
+script = ExtResource("1_eiy5c")
+days_left = 3
