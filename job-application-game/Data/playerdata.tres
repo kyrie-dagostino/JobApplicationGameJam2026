@@ -1,0 +1,8 @@
+[gd_resource type="Resource" format=3 uid="uid://dgtj2aw6oned"]
+
+[ext_resource type="Script" uid="uid://b2sxcgn3kcd5y" path="res://Data/playerdata.gd" id="1_3smcd"]
+
+[resource]
+script = ExtResource("1_3smcd")
+max_tolerance = 8
+tolerance = 8

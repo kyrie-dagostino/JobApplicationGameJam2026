@@ -1,8 +1,0 @@
-[gd_resource type="Resource" script_class="tolerance_value" format=3 uid="uid://djcnyuhv2qq18"]
-
-[ext_resource type="Script" uid="uid://ppja5upvsf7b" path="res://Data/tolerance.gd" id="1_gttw8"]
-
-[resource]
-script = ExtResource("1_gttw8")
-health = 8
-MAX_HEALTH = 8

@@ -1,7 +1,0 @@
-[gd_resource type="LabelSettings" format=3 uid="uid://cbtpw2tktsmp1"]
-
-[ext_resource type="FontFile" uid="uid://crh16f7ih7gyu" path="res://Assets/Art/Fonts/SirinStencil-Regular.ttf" id="1_k2e58"]
-
-[resource]
-font = ExtResource("1_k2e58")
-font_size = 95
